@@ -13,7 +13,7 @@ public class LibraryManagementSystem1 extends JFrame {
     PreparedStatement pst;
     ResultSet rs;
 
-    // UI Components
+    
     JTextField txtBookId, txtTitle, txtAuthor, txtUserId, txtName, txtEmail;
     JTable table;
     DefaultTableModel model;
@@ -34,14 +34,14 @@ public class LibraryManagementSystem1 extends JFrame {
         }
     }
 
-    // Initialize UI Components
+   
     private void initComponents() {
         setTitle("Library Management System");
         setSize(900, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Panel for Buttons
+       
         JPanel buttonPanel = new JPanel();
         buttonPanel.setLayout(new GridLayout(1, 5, 10, 10));
 
@@ -59,13 +59,13 @@ public class LibraryManagementSystem1 extends JFrame {
 
         add(buttonPanel, BorderLayout.NORTH);
 
-        // Table for displaying data
+     
         model = new DefaultTableModel();
         table = new JTable(model);
         JScrollPane scrollPane = new JScrollPane(table);
         add(scrollPane, BorderLayout.CENTER);
 
-        // Event Listeners
+      
         btnAddBook.addActionListener(e -> addBook());
         btnSearchBook.addActionListener(e -> searchBook());
         btnBorrowBook.addActionListener(e -> borrowBook());
@@ -75,7 +75,7 @@ public class LibraryManagementSystem1 extends JFrame {
         setVisible(true);
     }
 
-    // Add a New Book
+
     private void addBook() {
         JPanel panel = new JPanel(new GridLayout(2, 2, 10, 10));
         JTextField txtTitle = new JTextField();
@@ -103,7 +103,7 @@ public class LibraryManagementSystem1 extends JFrame {
         }
     }
 
-    // Search for Books
+   
     private void searchBook() {
         String title = JOptionPane.showInputDialog(this, "Enter Book Title to Search:");
         try {
